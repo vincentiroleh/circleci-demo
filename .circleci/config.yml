@@ -34,7 +34,7 @@ jobs:
       - run: 
           name: Run on fail status
           command: |
-            npm audit fix
+            npm audit fix --force
           when: on_fail
 
 workflows:
@@ -47,4 +47,4 @@ workflows:
       - analyze:
           requires:
             - test
-            
+
